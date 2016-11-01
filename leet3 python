@@ -1,0 +1,26 @@
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        sub={}
+        maxslen=0
+        carr=0
+        # curidx=0
+        headidx=0
+        ans=0
+
+        for curidx in xrange(len(s)):
+            if s[curidx] in sub:
+                if sub[s[curidx]]>=headidx:
+                    headidx=sub[s[curidx]]+1
+            if (curidx - headidx +1) >ans:
+                ans=(curidx - headidx +1)
+            sub[s[curidx]]=curidx
+        return ans
+    
+        
+                
+            
+        
