@@ -1,4 +1,4 @@
-//list solution
+# //list solution
 class Solution(object):
     def romanToInt(self, s):
         """
@@ -27,6 +27,42 @@ class Solution(object):
                         sidx+=1
             
         return out
+# hash type
+class Solution(object):
+    def romanToInt(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        rtoi={}
+        
+        
+        strlen = len(s)
+        realen=len(s)
+        idx=0
+        out=0
+        sidx=0
+        romanlist=['I','V','X','L','C','D','M']
+        intlist =[1,5,10,50,100,500,1000]
+        strlen-=1
+        for ii in xrange(len(intlist)):
+            rtoi[romanlist[ii]]=intlist[ii]
+        if s=='':
+            return 0
+        while strlen>=0:
+        # for sidx in xrange(strlen):
+            out+=rtoi[s[strlen]]
+            # if strlen-1>0 and strlen+1<realen-1:
+            if strlen-1>=0:
+                if rtoi[s[strlen-1]]<rtoi[s[strlen]]:
+                    out-=rtoi[s[strlen-1]]
+                    strlen-=1
+            strlen-=1
+            
+            
+        return out
+            
+        
             
         
             
