@@ -31,7 +31,7 @@ class Solution(object):
                 low= mid
         ans.append(hi)
         return ans
-////            
+# ////   //////////////////////////////////////////////         
 class Solution(object):
     def searchRange(self, nums, target):
         """
