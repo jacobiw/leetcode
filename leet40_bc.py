@@ -8,7 +8,7 @@ class Solution(object):
         
         def search(sumli, state, st):
             for i in range(st, len(candidates)):
-                if i>st and candidates[i-1] == candidates[i]: continue
+                if i>st and candidates[i-1] == candidates[i]: continue # improt check
                 if sumli + candidates[i] >= target:
                     if sumli + candidates[i] == target:
                         ans.append(state+[candidates[i]])
