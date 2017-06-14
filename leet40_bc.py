@@ -19,3 +19,11 @@ class Solution(object):
         search(0,[],0)
         # print ans
         return ans
+#         [10,1,2,7,6,1,5] target:8, exp ans: [[1,2,5],[1,7],[1,1,6],[2,6]]
+#         w/o if i>st and candidates[i-1] == candidates[i]: continue
+#             [[1,1,6],[1,2,5],[1,7],[1,2,5],[1,7],[2,6]]
+#         w   if i    and candidates[i-1] == candidates[i]: continue
+#             [[1,2,5],[1,7],[2,6]]
+#         w   if i>st and candidates[i-1] == candidates[i]: continue
+#             [[1,1,6],[1,2,5],[1,7],[2,6]]
+            
